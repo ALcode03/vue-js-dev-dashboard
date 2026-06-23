@@ -1,15 +1,14 @@
 <script setup>
 defineProps(
     {
-        technology:Object 
+        technology: Object
     }
 );
 </script>
 
 <template>
-    <div clas="tech-card">
+    <div class="tech-card">
         <h3>{{ technology.name }}</h3>
-        <p>{{ technology.level }}</p>
-
+        <span>{{ technology.level }}</span>
     </div>
 </template>

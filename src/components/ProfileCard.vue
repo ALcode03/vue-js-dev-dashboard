@@ -6,7 +6,7 @@
        const developer = {
         name: "Alexandra KEDJU",
         role: "Full Stack Developer",
-        country: "Drc/KINSHASA 🇨🇩"
+        country: "KINSHASA-DRC"
        };
        </script>
 
@@ -15,10 +15,12 @@
        * elements inside the component
        */
 
+       
+
        <template>
         <div class="profile-card">
             <img
-                src="https://litslink.com/wp-content/uploads/2024/06/8-1024x682.jpg"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5nrgLYLwTSL_wEKgcHXc1n9pqbS640QUeinVF_gQkEA&s"
                 alt="Profile picture"
             >
              

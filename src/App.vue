@@ -1,9 +1,9 @@
 <script setup>
-import { ref, computed} from "vue";
+import { ref, computed } from 'vue';
 
-import ProfileCard from "./componemts/ProfileCard.vue";
+import ProfileCard from "./components/ProfileCard.vue";
 import StatsCard from "./components/StatsCard.vue";
-import TechCard from "./components/TechCard.vue";
+import TechCard from "./components/TechCard.vue"
 
 import { technologies } from "./data/technologies";
 
@@ -11,42 +11,44 @@ const search = ref("");
 
 const filterTechnologies = computed(() => {
     return technologies.filter((tech) =>
-    tech.name.toLowerCase().includes(
-        search.value.toLowerCase()
-    )
-  );
+        tech.name.toLowerCase().includes(
+            search.value.toLowerCase()
+        )
+    );
 });
 </script>
 
 <template>
-    
+
     <div class="container">
-        <header class="her">
+
+        <header class="hero">
+
             <h1>Vue Developer Dashboard</h1>
 
-            <p>Building modern interface with Vue.js</p>
+            <p>Building modern interfaces with Vue.js</p>
 
         </header>
 
-        <section class=""top-section>
+        <section class="top-section">
 
-            <profileCard />
+            <ProfileCard />
 
-            <div class="stats-gride">
-                
+            <div class="stats-grid">
+
                 <StatsCard
-                titile="Projects"
-                :value="12"
+                    title="Projects"
+                    :value="12"
                 />
 
-                <StatsCard
-                titile="Students"
-                :value="150"
+                <StatsCard 
+                    title="Students"
+                    :value="150"
                 />
 
-                <StatsCard
-                titile="Years of experiance"
-                :value="3"
+                <StatsCard 
+                    title="Years Experience"
+                    :value="3"
                 />
 
             </div>
@@ -54,20 +56,20 @@ const filterTechnologies = computed(() => {
         </section>
 
         <section class="search-section">
-
             <input
-                  v-model="search"
-                  type="text"
-                  placeholder="Search technology..."
+                v-model="search"
+                type="text"
+                placeholder="Search technology..."
             >
         </section>
 
-            <section class="tech-grid">
-                <TechCard
+        <section class="tech-grid">
+
+            <TechCard
                 v-for="tech in filterTechnologies"
                 :key="tech.id"
                 :technology="tech"
-                />
+            />
 
         </section>
     </div>
