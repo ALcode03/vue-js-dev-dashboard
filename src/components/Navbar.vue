@@ -18,6 +18,21 @@
 
                 Projects
             </RouterLink>
+
+             <RouterLink 
+                 to="/dashboard" 
+            >
+            
+                Dashboard
+            </RouterLink>
+
+             <RouterLink 
+                 to="/skills" 
+            >
+
+                Skills
+            </RouterLink>
+
         </div>
    </nav>
 </template>
